@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            background: rgb(52, 49, 49);
+            height: 98vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #submain{
+            background: white;
+            width: 380px;
+            height: 380px;
+        }
+        #submain1{
+            background: black;
+            margin: 30px;
+            width: 320px;
+            height: 320px;
+            border-radius: 10px;
+        }
+        #time{
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        #test{
+            margin-top: 10px;
+        }
+        #date{
+            text-align: center;
+        }
+        .box1{
+            border: 2px solid white;
+            width: 60px;
+            height: 30px;
+            border-radius: 5px;
+            font-size: 23px;
+            text-align: center;
+            color: red;
+        }
+        #hour{
+            display: flex;
+            justify-content: space-around;
+        }
+        #date2{
+            text-align: center;
+            color: white;
+        }
+        .box2{
+            border: 2px solid white;
+            width: 70px;
+            height: 30px;
+            border-radius: 5px;
+            font-size: 23px;
+            text-align: center;
+            color: red;
+        }
+        #symbol{
+            color: white;
+            font-size: 30px;
+            margin-top: 47px;
+        }
+        #day{
+            margin-top: 20px;
+        }
+        #date3{
+            text-align: center;
+            color: white;
+        }
+        .box3{
+            border: 2px solid white;
+            width: 140px;
+            height: 30px;
+            border-radius: 5px;
+            margin-left: 27%;
+            font-size: 23px;
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="submain">
+            <div id="submain1">
+               <div id="time">
+                    <div id="test">
+                        <p id="date">DATE</p>
+                        <div class="box1" id="d1"></div>
+                    </div>
+                    <div id="test">
+                        <p id="date">MONTH</p>
+                        <div class="box1" id="m1"></div>
+                    </div>
+                    <div id="test">
+                        <p id="date">YEAR</p>
+                        <div class="box1" id="y1"></div>
+                    </div>
+               </div>
+               <div id="hour">
+                    <div id="second">
+                        <p id="date2">HOUR</p>
+                        <div class="box2" id="h1"></div>
+                    </div>
+                    <div id="symbol">:</div>
+                    <div id="second">
+                        <p id="date2">MINUTE</p>
+                        <div class="box2" id="m2"></div>
+                    </div>
+                    <div id="symbol">:</div>
+                    <div id="second">
+                        <p id="date2">SECOND</p>
+                        <div class="box2" id="s1"></div>
+                    </div>
+               </div>
+               <div id="day">
+                    <div id="day1">
+                        <p id="date3">DAY</p>
+                        <div class="box3" id="d2"></div>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const a = new Date();
+        const b = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        const c = b[a.getDay()];
+
+        document.getElementById("d1").innerHTML = a.getDate();
+        document.getElementById("m1").innerHTML = a.getMonth();
+        document.getElementById("y1").innerHTML = a.getFullYear();
+        document.getElementById("h1").innerHTML = a.getHours();
+        document.getElementById("m2").innerHTML = a.getMinutes();
+        document.getElementById("s1").innerHTML = a.getSeconds();
+        document.getElementById("d2").innerHTML = c;
+    </script>
+</body>
+</html>
